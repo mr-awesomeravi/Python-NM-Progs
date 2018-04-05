@@ -1,10 +1,16 @@
 #Ravi Rathee 16csu292
+import math
 #Simpsons 1/3 Rule
+
 def fx(x):
     return 1/(1 + x**2 )
+    #arc length = integrate math.sqrt(1+ f'(x)**2) from a to b
+    #return math.sqrt(1 + x**4)
+    #return math.sqrt( math.cos(x) )
 
 def simpsons(a,b,n):
     h = (b-a)/n
+    
     print("h = : {}".format(h), end="\n\n")
 
     print( "{:>10}{:>10}{:>10}".format("index","x","f(x)" ) )
@@ -26,14 +32,13 @@ def simpsons(a,b,n):
 
 
     print()
-    j+=1
     print( "{:10}{:10.3}{:10.3}".format(j, float(b),float(fx(b)) ) )
 
     return (h/3.0)*(  ( fx(a)+fx(b) ) + 4*oddsum  +2*evensum   )
 
-a = int(input("Enter initial value of limit: ") )
-b = int(input("Enter final   value of limit: ") )
-n = int(input("Enter number of intervals   : ") )
+a = float(input("Enter initial value of limit: ") )
+b = float(input("Enter final   value of limit: ") )
+n = float(input("Enter number of intervals   : ") )
 
 answer = simpsons(a,b,n)
 print("{:<10.5}".format(answer))
@@ -53,6 +58,6 @@ h = : 1.0
          4       4.0    0.0588
          5       5.0    0.0385
 
-         7       6.0     0.027
-1.3662 
+         6       6.0     0.027
+1.3662
 """

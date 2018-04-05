@@ -8,14 +8,14 @@ def simpsons(a,b,n):
     print("h = : {}".format(h), end="\n\n")
 
 
-    print( "{:10}{:10.3}{:10.3}".format(int(0), float(a), float(fx(a)) ),end="\n\n" )
+    print( "{:10}{:10.3f}{:10.3f}".format(int(0), float(a), float(fx(a)) ),end="\n\n" )
 
     mulof3 =0
     exceptmulof3 = 0
     i = a+h     #current_interval
     j = 1       #current_index_of_interval
     while(i<b):
-        print( "{:10}{:10.3}{:10.3}".format( j, i , fx(i) ) )
+        print( "{:10}{:10.3f}{:10.3f}".format( j, i , fx(i) ) )
         if(j%3==0):
             mulof3+= fx(i)
         elif(j%3!=0):
@@ -25,7 +25,6 @@ def simpsons(a,b,n):
         i+=h
 
     print()
-    j+=1
     print( "{:10}{:10.3}{:10.3}".format(j, float(b),float(fx(b)) ) )
 
     return (3.0*h/8.0)*(  ( fx(a)+fx(b) ) + 3*exceptmulof3  +2*mulof3  )
@@ -51,6 +50,6 @@ h = : 1.0
          4       4.0    0.0588
          5       5.0    0.0385
 
-         7       6.0     0.027
+         6       6.0     0.027
 1.3571
 """

@@ -4,7 +4,7 @@ plt.style.use('ggplot')
 
 # Initial function given
 def f(x):
-    return x**2
+    return (x**3)/3
 
 
 # Definite integral of the function from a to b
