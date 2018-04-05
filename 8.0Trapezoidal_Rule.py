@@ -1,7 +1,10 @@
 #Ravi Rathee 16csu292
 #Trapezoidal Rule
+import math
+
 def fx(x):
-    return 1/(1 + x**2 )
+    #return 1/(1 + x**2 )
+    return math.sqrt(1+x**4)
 
 def trapezoidal(a,b,n):
     h = (b-a)/n
