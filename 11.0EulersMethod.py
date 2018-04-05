@@ -30,9 +30,9 @@ answer = eulers(x,y,xn,n)
 
 print("{:6.4}".format(answer))
 
+"""
 OUTPUT
 
-"""
 Enter initial value of x0: 2
 Enter initial value of y0: 1
 Enter value of xn: 2.2
