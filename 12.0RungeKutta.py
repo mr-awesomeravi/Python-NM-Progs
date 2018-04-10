@@ -1,7 +1,8 @@
 #Ravi Rathee 16csu292
 #Runge - Kutta Method
 def fxy(x,y):
-    return (-1)*(x)*(y**2)
+    #return (-1)*(x)*(y**2)
+    return x**2 + y
 
 def rungekutta(x,y,xn,n):
     h = (xn - x) / n     #step size
@@ -36,9 +37,9 @@ answer = rungekutta(x,y,xn,n)
 
 print("{:6.4}".format(answer))
 
-
-OUTPUT
 """
+OUTPUT
+
 Enter initial value of x0: 0
 Enter initial value of y0: 1
 Enter value of xn: 1.4
