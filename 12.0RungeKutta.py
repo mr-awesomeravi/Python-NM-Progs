@@ -2,8 +2,9 @@
 #Runge - Kutta Method
 def fxy(x,y):
     #return (-1)*(x)*(y**2)
-    return x**2 + y
-
+    #return x**2 + y
+    return x*y + y**2
+    
 def rungekutta(x,y,xn,n):
     h = (xn - x) / n     #step size
     print("value of h : {:4.4}".format(h))
