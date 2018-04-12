@@ -1,8 +1,9 @@
 #Ravi Rathee 16csu292
 #Eulers Method
 def fxy(x,y):
-    return (-1)*(x)*(y**2)
-
+    #return (-1)*(x)*(y**2)
+    #return x+y+x*y
+    return x+y**2
 def eulers(x,y,xn,n):
     h = (xn - x) / n     #step size
     print("value of h : {:4.4}".format(h))

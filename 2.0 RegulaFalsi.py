@@ -1,3 +1,6 @@
+#Ravi Rathee #16csu292
+#Regula Falsi
+
 x1 = 1
 x2 = 2
 count = 0
