@@ -16,13 +16,14 @@ def eulers(x,y,xn,n):
         a = x
         b = y
         y = y + h*fxy(x,y)
-        j=0
-        while(j<2): #for modifying current values
 
-            y = b + ((h/2)*( fxy(a,b)+fxy(x,y) ))
+        ynew = b + ((h/2)*( fxy(a,b)+fxy(x,y) ))
+        while( abs( ynew - y )> 10**(-3)): #for modifying current values
+            y = ynew
+            ynew = b + ((h/2)*( fxy(a,b)+fxy(x,y) ))
             a = x
             b = y
-            j+=1
+
             print("Modified :     {:10.4f}{:10.4f}".format(x,y))
 
         x+=h
@@ -47,17 +48,15 @@ OUTPUT
 
 Enter initial value of x0: 0
 Enter initial value of y0: 1
-Enter value of xn: 0.2
+Enter value of xn: .2
 Enter value of n: 2
 value of h :  0.1
                         x         y
 Simple Euler       0.0000    1.0000
 Modified :         0.0000    1.1105
-Modified :         0.0000    1.2338
-Simple Euler       0.1000    1.2338
-Modified :         0.1000    1.4174
-Modified :         0.1000    1.6283
-Modified :         0.2000    1.6283
+Simple Euler       0.1000    1.1105
+Modified :         0.1000    1.2595
+Modified :         0.2000    1.2595
 
-Final Answer :  1.628
+Final Answer :   1.26
 """
