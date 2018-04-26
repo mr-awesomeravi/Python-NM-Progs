@@ -46,7 +46,7 @@ def milne(x,y,xn,n):
         print("{:10.4f}{:10.4f}".format(x4,y4))
 
         x0,x1,x2,x3 = x1,x2,x3,x4
-        y0,y2,y3,y4 = y1,y2,y3,y4
+        y0,y1,y2,y3 = y1,y2,y3,y4
         f1,f2,f3 = f2,f3,f4
 
         i+=1
