@@ -32,9 +32,18 @@ a = [[2, 1, 6, 9], [8, 3, 2, 13], [1, 5, 1, 7]]    #ans = [1, 1, 1]
 
 print_mat(a)
 
-#gauss jordan main program
+#forward elemination
 for j in range(n):
     for i in range(n):
+        if i>j:
+            c = a[i][j] / a[j][j]
+            for k in range(n+1):
+                a[i][k] = a[i][k] - c * a[j][k]
+print_mat(a)
+
+#backward elemination
+for j in range(n-1,-1,-1):
+    for i in range(n-1,-1,-1):
         if i<j:
             c = a[i][j] / a[j][j]
             for k in range(n+1):
